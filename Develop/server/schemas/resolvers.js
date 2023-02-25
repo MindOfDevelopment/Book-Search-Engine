@@ -21,7 +21,7 @@ const resolvers = {
   Mutation: {
     addUser: async (parent, args) => {
       try {
-        const user = await User.create(body);
+        const user = await User.create(args);
 
         if (!user) {
           throw AuthenticationError("Something is wrong!");
